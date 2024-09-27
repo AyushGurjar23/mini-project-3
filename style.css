@@ -1,0 +1,142 @@
+/* Resetting the default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', monospace;
+    background-color: #1e1e1e; /* Dark background for a gaming vibe */
+    color: #ffffff; /* White text for contrast */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    text-align: center;
+    background-color: #282828; /* Darker container for depth */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 600px;
+    animation: zoomIn 1s ease-in-out; /* Zoom-in animation */
+}
+
+h1 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: #4caf50; /* Green color for gaming theme */
+    animation: slideIn 1s ease-out forwards; /* Header slide-in animation */
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: #ffeb3b; /* Bright yellow for visibility */
+    animation: bounce 1.5s ease-in-out infinite; /* Bounce animation for the main title */
+}
+
+textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    transition: box-shadow 0.3s ease;
+    resize: none;
+    background-color: #424242; /* Darker text area */
+    color: #ffffff; /* White text */
+}
+
+textarea:focus {
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.5); /* Focus effect */
+    outline: none;
+}
+
+button {
+    padding: 10px 30px;
+    font-size: 18px;
+    color: #ffffff;
+    background-color: #4caf50; /* Green background */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Animation added */
+    position: relative; /* Position for animation */
+    overflow: hidden; /* Hide overflow */
+}
+
+button:hover {
+    background-color: #388e3c; /* Darker green on hover */
+    transform: scale(1.05); /* Hover effect with scaling */
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.8); /* Glow effect on hover */
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}
+
+/* Keyframe animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
